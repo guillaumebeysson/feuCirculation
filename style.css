@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=VT323&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-height: 100vh;
+    overflow: hidden;
+}
+.container{
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+.partieGauche{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.partieMilieu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+.partieDroite{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.coinGaucheHaut{
+    background-color: green;
+    height: 100%;
+    border-right: solid 3px white;
+    border-bottom: solid 3px white;
+    position: relative;
+}
+.milieuGauche{
+    background-color: grey;
+    height: 100%;
+}
+.coinGaucheBas{
+    background-color: green;
+    height: 100%;
+    border-top: solid 3px white;
+    border-right: solid 3px white;
+}
+.routeGaucheVertical{
+    background-color: grey;
+    width: 100%;
+    border-right: dashed 3px white ;
+    position: relative;
+}
+.car{
+    width: 45%;
+}
+#carLeft{
+    position: absolute;
+    top: 0px;
+    display: block;
+    transition: all 3s ease-in-out;
+    z-index: 2;
+}
+#carRight{
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    display: block;
+    transition: all 3s ease-in-out;
+    z-index: 2;
+}
+
+.routeDroitVertical{
+    background-color: grey;
+    width: 100%;
+    border-left: dashed 3px white;
+    position: relative;
+}
+.coinDroitHaut{
+    background-color: green;
+    height: 100%;
+    border-left: solid 3px white;
+    border-bottom: solid 3px white;
+}
+.milieuDroit{
+    background-color: grey;
+    height: 100%;
+}
+.coinDroitBas{
+    background-color: green;
+    height: 100%;
+    border-top: solid 3px white;
+    border-left: solid 3px white;
+    position: relative;
+}
+.feu{
+    position: absolute;
+    border: solid 2px black;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #343333;
+}
+#feuGauche{
+    bottom: 5px;
+    right: 5px;
+}
+#feuDroit{
+    top: 5px;
+    left: 5px;
+}
+.rouge{
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 3px;
+    box-shadow: 0 0 0.5em red;
+}
+.orange{
+    width: 25px;
+    height: 25px;
+    background-color: orange;
+    border-radius: 50%;
+    margin: 3px;
+    box-shadow: 0 0 0.5em orange;
+}
+.vert{
+    width: 25px;
+    height: 25px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    margin: 3px;
+    box-shadow: 0 0 0.5em greenyellow;
+}
+#lineStopUp{
+    width: 50%;
+    color: white;
+    position: absolute;
+    top: 33%;
+    left: 0px;
+    border-bottom: solid 4px white;
+}
+#lineStopDown{
+    width: 50%;
+    color: white;
+    position: absolute;
+    bottom: 33%;
+    right: 0px;
+    border-bottom: solid 4px white;
+}
+#countdowntimerGauche{
+    position: absolute;
+    right: 48px;
+    bottom: 30px;
+    font-size: 30px;
+    font-family: 'VT323', monospace;
+    font-family: 'Orbitron', sans-serif;
+    border: solid 1px black;
+    color: orange;
+    background-color: #343333;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#countdowntimerDroit{
+    position: absolute;
+    left: 48px;
+    top: 30px;
+    font-size: 30px;
+    font-family: 'VT323', monospace;
+    font-family: 'Orbitron', sans-serif;
+    border: solid 1px black;
+    color: orange;
+    background-color: #343333;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media screen and (max-width: 1400px) {
+    .car{
+        
+        width: 70%;
+        max-height: 29%;
+        transition: all 0.1s;
+    }
+  }
+@media screen and (max-width: 1000px) {
+    .car{
+        width: 100%;
+        
+        transition: all 0.1s;
+    }
+  }
+@media screen and (max-width: 700px) {
+    .car{
+        height: 50%;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .car{
+        height: auto;
+    }
+    #lineStopUp{
+        width: 50%;
+        color: white;
+        position: absolute;
+        top: 24%;
+        left: 0px;
+        border-bottom: solid 4px white;
+    }
+    #lineStopDown{
+        width: 50%;
+        color: white;
+        position: absolute;
+        bottom: 24%;
+        right: 0px;
+        border-bottom: solid 4px white;
+    }
+  }
+

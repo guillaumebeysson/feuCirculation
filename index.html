@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Feu de circulation</title>
+</head>
+
+<body>
+    <audio id="sonGauche" src="demarrageCar2.mp3"></audio>
+    <div class="container">
+        <div class="partieGauche">
+            <div class="coinGaucheHaut">
+                <span id="countdowntimerGauche">0</span>
+                <div class="feu" id="feuGauche">
+                    <div class="rouge" id="rougeGauche"></div>
+                    <div class="orange" id="orangeGauche"></div>
+                    <div class="vert" id="vertGauche"></div>
+                </div>
+            </div>
+            <div class="milieuGauche"></div>
+            <div class="coinGaucheBas"></div>
+        </div>
+        <div class="partieMilieu">
+            <div class="routeGaucheVertical"> <img id="carLeft" class="car" src="carRight2.png" alt=""><span
+                    id="lineStopUp"></span>
+            </div>
+            <div class="routeDroitVertical"><img id="carRight" class="car" src="carLeft.png" alt=""><span
+                    id="lineStopDown"></span>
+            </div>
+        </div>
+        <div class="partieDroite">
+            <div class="coinDroitHaut"></div>
+            <div class="milieuDroit"></div>
+            <div class="coinDroitBas">
+                <span id="countdowntimerDroit">0</span>
+                <div class="feu" id="feuDroit">
+                    <div class="rouge" id="rougeDroit"></div>
+                    <div class="orange" id="orangeDroit"></div>
+                    <div class="vert" id="vertDroit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
